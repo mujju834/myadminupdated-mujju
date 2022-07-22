@@ -1,25 +1,57 @@
-import logo from './logo.svg';
 import './App.css';
+import Sidebar from './components/sidebar/Sidebar';
+import Topbar from './components/Topbar/Topbar';
+import Home from './pages/Home/Home';
+import {BrowserRouter as Router,Routes,Route,Link} from "react-router-dom";
+import Userlist from './pages/userlist/Userlist';
+import User from './pages/user/User';
+import Newuser from './pages/newuser/Newuser';
+import Productlist from './pages/productlist/Productlist';
+import Product from './pages/product/Product';
+import Newproduct from './pages/newproduct/Newproduct';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // router defined
+    <Router>
+<Topbar />
+<div className="container">
+  <Sidebar />
+  {/* link is required in new router element to give the path */}
+  <Link to='/' /> <br />
+  <Link to='/users' /> <br />
+  {/* Routes are the parent elements of route */}
+<Routes>
+<Route exact path="/" element={<Home/>} />
+<Route exact path="/users" element={<Userlist/>} />
+<Route exact path="/user/:userId" element={<User/>} />
+<Route exact path="/newuser" element={<Newuser/>} />
+<Route exact path="/products" element={<Productlist/>} />
+
+<Route exact path="/product/:productsId" element={<Product/>} />
+<Route exact path="/newproduct" element={<Newproduct/>} />
+
+</Routes>
+</div>
+    </Router>
+  )
 }
 
-export default App;
+export default App
+
+
+
+/* <BrowserRouter>
+
+<Link to='/'>Home</Link> <br />
+<Link to='/About'>About</Link>
+
+
+<Routes>
+<Route exact path="/" element={<Home/>} />
+<Route path="/About" element={<About/>} />
+
+</Routes>
+
+</BrowserRouter> */

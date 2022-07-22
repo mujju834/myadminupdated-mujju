@@ -1,0 +1,49 @@
+.newuser{
+    flex: 4;
+}
+.newuserform{
+    display: flex;
+    flex-wrap: wrap;
+}
+.newuseritem{
+    width: 400px;
+display: flex;
+flex-direction: column;
+margin-top: 10px;
+margin-right: 20px;
+}
+.newuseritem>label{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: grey;
+}
+.newuseritem>input{
+    height: 20px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.newusergender>input{
+    margin-top: 15px;
+}
+.newusergender>label{
+    margin: 10px;
+    font-size: 18px;
+    color: #555;
+}
+.newuserselect{
+    height: 40px;
+    border-radius: 5px;
+}
+.newuserbutton{
+    width: 60px;
+    height: 23px;
+    border: none;
+    background-color: darkblue;
+    color: white;
+    font-weight: 600;
+    border-radius: 15px;
+    margin-top: 50px;
+    cursor: pointer;
+}
