@@ -8,7 +8,6 @@ import User from './pages/user/User';
 import Newuser from './pages/newuser/Newuser';
 import Productlist from './pages/productlist/Productlist';
 import Product from './pages/product/Product';
-import Newproduct from './pages/newproduct/Newproduct';
 
 
 const App = () => {
@@ -30,7 +29,6 @@ const App = () => {
 <Route exact path="/products" element={<Productlist/>} />
 
 <Route exact path="/product/:productsId" element={<Product/>} />
-<Route exact path="/newproduct" element={<Newproduct/>} />
 
 </Routes>
 </div>
